@@ -15,7 +15,7 @@ import javax.annotation.PostConstruct;
  * @Author: Wilson
  * @createTime 2020/11/11 16:53
  */
-@Component
+//@Component
 @Data
 public class TestBean implements InitializingBean {
     private String name;

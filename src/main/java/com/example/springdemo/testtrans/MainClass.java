@@ -17,12 +17,5 @@ public class MainClass {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
         TestService testService = (TestService) context.getBean("testServiceImpl");
         testService.query();
-        String path = "";
-//        InputStream ins = new FileInputStream(path);
-//        int available = ins.available();
-        File file = new File(path);
-        file.getName();
-        file.length();
-
     }
 }

@@ -11,5 +11,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface ITestMapper {
     int query();
 
-    int saveUser(OrderEntity orderEntity);
+    int saveUser (OrderEntity orderEntity);
 }

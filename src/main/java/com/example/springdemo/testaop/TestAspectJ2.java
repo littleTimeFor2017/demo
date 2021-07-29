@@ -1,13 +1,17 @@
 package com.example.springdemo.testaop;
 
-
 import org.aspectj.lang.annotation.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.Order;
 
+/**
+ * @author Bruce Lee
+ * @date 2021/7/16
+ * @description
+ **/
 @Aspect
-//@Order(value = 2)
-public class TestAspectJ {
+//@Order(value = 1)
+public class TestAspectJ2 {
 
     @Value("1234")
     private String name;
@@ -18,27 +22,26 @@ public class TestAspectJ {
 
     @Before("pointCut()")
     public void methodBefore() {
-        System.out.println("进入methodBefore方法");
+        System.out.println("进入 TestAspectJ2 methodBefore方法");
     }
 
     @After("pointCut()")
     public void methodAfter() {
-        System.out.println("methodAfter");
+        System.out.println("TestAspectJ2 methodAfter");
     }
 
     @AfterReturning("pointCut()")
     public void methodAfterReturning() {
-        System.out.println("methodAfterReturning");
+        System.out.println(" TestAspectJ2 methodAfterReturning");
     }
 
     @AfterThrowing("pointCut()")
     public void methodAfterThrowing() {
-        System.out.println("methodAfterThrowing");
+        System.out.println(" TestAspectJ2 methodAfterThrowing");
     }
 
 //    @Around("pointCut()")
 //    public void methodAround() {
-//        System.out.println("methodAround");
+//        System.out.println("TestAspectJ2 methodAround");
 //    }
-
 }

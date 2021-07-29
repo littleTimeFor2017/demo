@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -26,7 +27,9 @@ import javax.sql.DataSource;
  */
 @ComponentScan(basePackages = {"com.example.springdemo.testtrans"})
 @EnableConfigurationProperties
-@Import(value = {MainConfig1.class})
+@EnableAspectJAutoProxy(exposeProxy = true)
+//@Import(value = {MainConfig1.class})
+
 @EnableTransactionManagement()
 public class MainConfig implements InitializingBean {
 

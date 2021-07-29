@@ -1,5 +1,6 @@
 package com.example.springdemo.test;
 
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.context.annotation.*;
 
 /**
@@ -13,8 +14,12 @@ import org.springframework.context.annotation.*;
 //@PropertySource(value = "classpath:application.yml")
 public class MainConfig {
 
-//    @Bean
-//    public TestBean testBean() {
-//        return new TestBean("abx");
-//    }
+    /**
+     * initMethod属性表示的是要创建的bean的内部的方法。
+     * @return
+     */
+    @Bean(initMethod= "PostConstruct")
+    public TestBean testBean() {
+        return new TestBean("abx");
+    }
 }

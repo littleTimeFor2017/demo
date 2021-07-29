@@ -11,7 +11,11 @@ public class MainClass {
 
         public static void main(String[] args) {
             AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
-            TestBean testBean = (TestBean) context.getBean("testBean");
-            System.out.println(testBean);
+            TestB TestB = (TestB) context.getBean("testB");
+            TestA TestA = (TestA) context.getBean("testA");
+            System.out.println(TestB);
+            System.out.println(TestA);
+            System.out.println(TestB.getTestA());
+//            System.out.println(testBean);
         }
 }

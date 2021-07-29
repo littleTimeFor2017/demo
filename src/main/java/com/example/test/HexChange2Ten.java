@@ -12,18 +12,27 @@ public class HexChange2Ten {
 
 
     public static void main(String[] args) {
-        long i = hexToDecimal("0x83000000".toUpperCase());
+        long i = hexToDecimal("0a00001b".toUpperCase());
         System.out.println(i);
+        System.out.println(tenToHex(i));
 
     }
 
+    public static String tenToHex(long value) {
+        BigInteger bigInteger = new BigInteger(String.valueOf(value));
+        return bigInteger.toString(16);
+    }
+
+
     /**
-     * @param: [hex]
+     * 十六进制转十进制(long 类型防止超出范围)
+     *
+     * @param: 十六进制字符串
      * @return: int
      * @description: 按位计算，位值乘权重
      */
     public static long hexToDecimal(String hex) {
-        long outcome = 0l;
+        long outcome = 0L;
         for (int i = 0; i < hex.length(); i++) {
             char hexChar = hex.charAt(i);
             outcome = outcome * 16 + charToDecimal(hexChar);
