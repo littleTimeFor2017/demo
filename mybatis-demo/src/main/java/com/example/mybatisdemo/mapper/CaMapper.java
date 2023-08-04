@@ -9,4 +9,6 @@ public interface CaMapper {
 
     List<CA> selectList();
 
+   int insert(CA ca);
+
 }

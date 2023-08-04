@@ -1,6 +1,11 @@
 package com.example.mybatisdemo.pojo;
 
 public class CA {
+
+    public CA(String name) {
+        this.name = name;
+    }
+
     private long id;
     private String name;
 
